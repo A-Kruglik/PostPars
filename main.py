@@ -9,8 +9,8 @@ class Parse:
     #url2 пока надо менять в ручную
     url2 = "https://gorzdrav.org/blog/?page=12"
     headers = {
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+        'Accept': 'Your accept',
+        'User-Agent': 'Your user-agent'
     }
 
     response = requests.get(url=url2, headers=headers)
