@@ -36,9 +36,12 @@ class Parse:
             items = soup.find_all('div', class_='b-section c-blog-details')
             for el in items:
                 try:
-                    a = f'https://gorzdrav.org'+el.find('img')['src']
-                    Parse.imag.append(a.replace(' ', ''))
-                    # Parse.imag.append(el.find('img')['src'])
+                    domen = el.find('img')['src']
+                    if domen[:4] == 'https':
+                        Parse.imag.append(el.find('img')['src'])
+                    else:
+                        a = f'https://gorzdrav.org'+el.find('img')['src']
+                        Parse.imag.append(a.replace(' ', ''))
                 except:
                     print('Тут нет картинки')
 
